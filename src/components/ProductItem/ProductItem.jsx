@@ -53,7 +53,7 @@ export default function ProductItem({ product }) {
 
   return (
     <>
-      <div className="mt-20 dark:bg-gray-700 product relative w-[20%] max-lg:w-[28%] max-md:w-[45%] max-sm:w-[100%] flex flex-col items-start justify-center m-6 p-3 rounded-lg cursor-pointer border border-[#f0f3f2] shadow-md mt-8">
+      <div className="mt-20 dark:bg-gray-700 ng product relative w-[20%] max-lg:w-[28%] max-md:w-[45%] max-sm:w-[100%] flex flex-col items-start justify-center m-6 p-3 rounded-lg cursor-pointer border border-[#f0f3f2] shadow-md mt-8">
         <div className="absolute right-2 top-2 bg-white-800 rounded-3xl bg-white dark:bg-none border-2 dark:bg-black px-2 py-1 shadow-md">
           <button onClick={() => addProductToWishlist(product._id)}>
             <i

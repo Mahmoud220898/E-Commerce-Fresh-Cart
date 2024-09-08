@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
 import styles from "./ForgetPassword.module.css";
 import Login from "../Login/Login";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 export default function ForgetPassword() {
-  useEffect(() => {}, []);
 
+  const navigation = useNavigate()
   return (
     <>
       <form class="max-w-sm mx-auto">
@@ -34,14 +34,16 @@ export default function ForgetPassword() {
             placeholder="Example@email.com"
           ></input>
         </div>
-        <Link rel="stylesheet" to="login">
+        {/* <Link rel="stylesheet" to="/login"> */}
           <button
             type="submit"
+            onClick={()=>{navigation("/login"); toast.success("Email sent successfully") }}
+
             class="justify-end items-end mt-5 text-white bg-green-700 ms-72 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
           >
             Submit
           </button>
-        </Link>
+        {/* </Link> */}
       </form>
     </>
   );

@@ -61,10 +61,12 @@ export default function Cart() {
         <title>Cart</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
+      {data?.data?.numOfCartItems? 
+     <> 
       <span className=" z-50 fixed transition-all duration-1000 -top-[0.5%] left-[62%] bottom-[94%] hover:bottom-[88%] text-white bg-gradient-to-br from-yellow-400 to-green-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-b text-sm px-5 py-2.5 text-center me-2 mb-2">
         Total Price : {data?.data?.data?.totalCartPrice} EGP
       </span>
-
+    </> : ''}
       {data?.data?.numOfCartItems ? (
         <div className="relative pt-20 overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
